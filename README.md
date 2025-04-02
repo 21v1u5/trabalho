@@ -1,6 +1,7 @@
 # projeto referente a uma analise de dados de infeccao de AIDS no maranhao (2018-2023) (python)
 
 cadeira: logica e matematica discreta
+
 alunos: 
   - Livius Penha
   - Eliseu
