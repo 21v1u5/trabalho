@@ -141,7 +141,6 @@ st.markdown("""
 <p style='font-size: 20px;'>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;A análise dos dados de AIDS no Maranhão entre 2018 e 2023 revelou que os casos concentram-se principalmente nas faixas etárias entre 20 e 39 anos, o que reforça a importância de campanhas direcionadas ao público jovem e adulto.
 Além disso, observou-se uma redução no número total de casos nos últimos anos, embora ainda existam variações significativas por grupo etário.
-O uso do Python e das bibliotecas modernas de visualização foi essencial para organizar, analisar e apresentar os dados de forma clara e acessível, contribuindo para uma tomada de decisão mais assertiva em saúde pública.<br>
 <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Este dashboard pode ser facilmente adaptado para análises de outros estados ou doenças notificáveis, promovendo a democratização dos dados e a ampliação do conhecimento baseado em evidências.<br>
 </p>""", unsafe_allow_html=True)
 
