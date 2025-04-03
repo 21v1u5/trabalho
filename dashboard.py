@@ -50,9 +50,17 @@ with st.sidebar:
 df = pd.read_csv("dados.csv", sep=",")
 df = df[df["Ano Notificação"] != "TOTAL"] # removendo linha total
 df["Ano Notificação"] = df["Ano Notificação"].astype(int)
+
 # lista de faixas etarias
 faixas = ['< 1 ano', '1-4', '5-9', '10-14', '15-19', '20-29', '30-39',
           '50-59', '60-69', '70-79', '80 e mais']
+
+df_sx = pd.read_csv("dados_sx.csv")
+df_sx = df_sx[df_sx["Sexo"] != "TOTAL"]
+
+df_sx_long = pd.melt(df_sx, id_vars=["Sexo"], value_vars=["2018", "2019", "2020", "2021", "2022", "2023"],
+                     var_name="Ano", value_name="Casos")
+df_sx_long["Ano"] = df_sx_long["Ano"].astype(int)            
 
 #===============================
 # titulo do dashboard
@@ -88,7 +96,7 @@ st.markdown("""
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Com base nos dados tratados, foram gerados quatro graficos, que compoem os dashboards abaixo:
 </p>
 <p style='font-size: 20px;'>
-1. Grafico de pizza que mostra a distribuicao por ano.<br>
+1. Grafico de linha que mostra a distribuicao de casos por ano com relação ao sexo.<br>
 2. Grafico de barras com os grupos etarios mais afetados.<br> 
 3. Grafico de barras empilhadas que mostra como a incidencia varia ao longo do tempo.<br>
 4. Grafico de linha que permite observar tendencias por grupo etario.<br>
@@ -99,7 +107,8 @@ st.markdown("""
 col1, col2 = st.columns(2)
 # grafico 1  >>  Evolucao total de casos por ano
 with col1:
-    fig1 = px.pie(df, names='Ano Notificação', values='Total', title="1.Total de Casos por Ano")
+    fig1 = px.line(df_sx_long, x="Ano", y="Casos", color="Sexo",
+                   title="Evolução de Casos de AIDS por Sexo (2018–2023)", markers=True)
     st.plotly_chart(fig1, use_container_width=True)
 # grafico 2  >>  Distribuicao por faixa etaria total (18-23)
 with col2:
@@ -133,14 +142,17 @@ with col4:
                    title="4.Evolucao por faixa etaria", markers=True)
     st.plotly_chart(fig4, use_container_width=True)
 
+
+
 #================================
 # texto de conclusao
 
 st.markdown("<h2 style='text-align: left; color: #004080;' >4. Conclusão</h2>", unsafe_allow_html=True)
 st.markdown("""
 <p style='font-size: 20px;'>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;A análise dos dados de AIDS no Maranhão entre 2018 e 2023 revelou que os casos concentram-se principalmente nas faixas etárias entre 20 e 39 anos. Além disso, observou-se uma redução no número total
-de casos nos últimos anos, embora ainda existam variações significativas por grupo etário, o que reforça a importância de campanhas direcionadas ao público jovem e adulto referente à conscientização e políticas públicas de saúde.
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;A análise dos dados de AIDS no Maranhão entre 2018 e 2023 revelou que os casos concentram-se principalmente nas faixas etárias entre 20 e 39 anos, predominantemente no sexo masculino, o que reforça a importância de campanhas direcionadas ao público jovem e adulto.
+Além disso, observou-se uma redução no número total de casos nos últimos anos, embora ainda existam variações significativas por grupo etário.
+O uso do Python e das bibliotecas modernas de visualização foi essencial para organizar, analisar e apresentar os dados de forma clara e acessível, contribuindo para uma tomada de decisão mais assertiva em saúde pública.<br>
 <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Este dashboard pode ser facilmente adaptado para análises de outros estados ou doenças notificáveis, promovendo a democratização dos dados e a ampliação do conhecimento baseado em evidências.<br>
 </p>""", unsafe_allow_html=True)
 
