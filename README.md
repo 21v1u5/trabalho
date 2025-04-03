@@ -1,6 +1,9 @@
-# projeto referente a uma analise de dados de infeccao de AIDS no maranhao (2018-2023) (python)
+# Análise de dados: infeccao de AIDS no maranhao (2018-2023) (python)
 
-cadeira: logica e matematica discreta
+Esta aplicação remete a um trabalho universitário da cadeira(lógica e matemática discreta) pela instituição UNDB.
+Em resumo, está aplicação se trata de uma análise de dados com python utilizando dados públicos.
+
+Objetivo é demonstrar a importância do tratamento, análise e manipulaçao de dados para um bom ou um entendimento extra sobre um determinado assunto com base nas informações coletadas.
 
 alunos: 
   - Livius Penha
@@ -8,6 +11,9 @@ alunos:
   - Rebert Furtado
   - Gabriel
 
+
+
+sobre a pesquisa.
 1. INTRODUCAO
     A AIDS (Síndrome da Imunodeficiência Adquirida) continua sendo um dos maiores desafios de saúde pública no Brasil.  Embora haja avanços significativos na prevenção e no tratamento, a incidência da doença ainda exige atenção constante dos gestores públicos e da sociedade. Este relatório tem como foco os casos notificados de AIDS no *estado do Maranhão, entre os anos de **2018 e 2023*, com o objetivo de analisar padrões de ocorrência por ano e faixa etária.  A escolha do Maranhão justifica-se por sua importância estratégica na Região Nordeste, além de ser um estado com desafios históricos em relação à cobertura de saúde e vigilância epidemiológica.
 
