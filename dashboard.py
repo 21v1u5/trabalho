@@ -96,10 +96,10 @@ st.markdown("""
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Com base nos dados tratados, foram gerados quatro graficos, que compoem os dashboards abaixo:
 </p>
 <p style='font-size: 20px;'>
-1. Grafico de linha que mostra a distribuicao de casos por ano com relação ao sexo.<br>
-2. Grafico de barras com os grupos etarios mais afetados.<br> 
-3. Grafico de barras empilhadas que mostra como a incidencia varia ao longo do tempo.<br>
-4. Grafico de linha que permite observar tendencias por grupo etario.<br>
+1. Gráfico de linha que mostra a distribuicao de casos por ano com relação ao sexo.<br>
+2. Gráfico de barras com os grupos etarios mais afetados.<br> 
+3. Gráfico de barras empilhadas que mostra como a incidencia varia ao longo do tempo.<br>
+4. Gráfico de linha que permite observar tendencias por grupo etario.<br>
 </p>""", unsafe_allow_html=True)
 
 #===============================
@@ -108,7 +108,7 @@ col1, col2 = st.columns(2)
 # grafico 1  >>  Evolucao total de casos por ano
 with col1:
     fig1 = px.line(df_sx_long, x="Ano", y="Casos", color="Sexo",
-                   title="Evolução de Casos de AIDS por Sexo (2018–2023)", markers=True)
+                   title="1.Evolução de Casos de AIDS por Sexo (2018–2023)", markers=True)
     st.plotly_chart(fig1, use_container_width=True)
 # grafico 2  >>  Distribuicao por faixa etaria total (18-23)
 with col2:
