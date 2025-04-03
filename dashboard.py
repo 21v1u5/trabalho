@@ -5,7 +5,7 @@ import plotly.express as px    #  construir graficos
 
 #=============================== 
 # configuracao da pagina
-st.set_page_config(page_title="AIDS no Maranhao", layout="wide")
+st.set_page_config(page_title="AIDS no Maranhão ", layout="wide")
 st.markdown("""
     <style>
     [data-testid="stSidebar"] {
@@ -20,10 +20,30 @@ st.markdown("""
 #===============================
 # SIDEBAR - painel lateral
 with st.sidebar:
-    st.image("logo_datasus.png", width=150)   # logo datasus
-    st.header("Maranhao")
+    st.image("logo_datasus.png", width=250)   # logo datasus
+    st.header("UF: Maranhão")
     st.image("https://upload.wikimedia.org/wikipedia/commons/4/45/Bandeira_do_Maranh%C3%A3o.svg",
-             width=150)
+             width=200)
+    st.markdown("---")
+
+    st.markdown("""
+    <div style='font-size:18px;'>
+        <b>Disciplina:</b> Lógica e Matemática Discreta<br>  
+        <br><b>Docente:</b> Leonardo Henrique Silva Lago
+    </div>
+    """, unsafe_allow_html=True)
+
+    st.markdown("---")
+
+    st.markdown("""
+    <div style='font-size:18px;'>
+        <b>Discentes:</b><br>
+        • Livius Penha<br>
+        • Roberth Furtado<br>
+        • Gabriel<br>
+        • Eliseu
+    </div>
+    """, unsafe_allow_html=True)
 
 #===============================
 # leitura e tratamento dos dados
@@ -39,7 +59,7 @@ faixas = ['< 1 ano', '1-4', '5-9', '10-14', '15-19', '20-29', '30-39',
 st.markdown("<h1 style='text-align: center; color: #004080;' >Casos de AIDS: De 2018 a 2023</h1>", unsafe_allow_html=True)
 
 # texto 1
-st.markdown("<h2 style='text-align: left; color: #004080;' >1. Introducao</h2>", unsafe_allow_html=True)
+st.markdown("<h2 style='text-align: left; color: #004080;' >1. Introdução</h2>", unsafe_allow_html=True)
 st.markdown("""
 <p style='font-size: 20px;'>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;A AIDS (Síndrome da Imunodeficiência Adquirida) continua sendo um dos maiores desafios de saúde pública no Brasil. 
@@ -113,10 +133,10 @@ with col4:
                    title="4.Evolucao por faixa etaria", markers=True)
     st.plotly_chart(fig4, use_container_width=True)
 
-
+#================================
 # texto de conclusao
 
-st.markdown("<h2 style='text-align: left; color: #004080;' >4. Conclusao</h2>", unsafe_allow_html=True)
+st.markdown("<h2 style='text-align: left; color: #004080;' >4. Conclusão</h2>", unsafe_allow_html=True)
 st.markdown("""
 <p style='font-size: 20px;'>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;A análise dos dados de AIDS no Maranhão entre 2018 e 2023 revelou que os casos concentram-se principalmente nas faixas etárias entre 20 e 39 anos, o que reforça a importância de campanhas direcionadas ao público jovem e adulto.
