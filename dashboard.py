@@ -93,13 +93,13 @@ Foi realizado um recorte específico para o estado do Maranhão, abrangendo o pe
 st.markdown("<h2 style='text-align: left; color: #004080;' >3. Dashboards apresentados</h2>", unsafe_allow_html=True)
 st.markdown("""
 <p style='font-size: 20px;'>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Com base nos dados tratados, foram gerados quatro graficos, que compoem os dashboards abaixo:
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Com base nos dados tratados, foram gerados quatro gráficos, que compõem os dashboards abaixo:
 </p>
 <p style='font-size: 20px;'>
-1. Gráfico de linha que mostra a distribuicao de casos por ano com relação ao sexo.<br>
-2. Gráfico de barras com os grupos etarios mais afetados.<br> 
-3. Gráfico de barras empilhadas que mostra como a incidencia varia ao longo do tempo.<br>
-4. Gráfico de linha que permite observar tendencias por grupo etario.<br>
+1. Gráfico de linha que mostra a distribuição de casos por ano com relação ao sexo.<br>
+2. Gráfico de barras com os grupos etários mais afetados.<br> 
+3. Gráfico de barras empilhadas que mostra como a incidência varia ao longo do tempo.<br>
+4. Gráfico de linha que permite observar tendências por grupo etário.<br>
 </p>""", unsafe_allow_html=True)
 
 #===============================
@@ -117,7 +117,7 @@ with col2:
     casos_por_faixa.columns = ["Faixa Etaria", "Casos"]
 
     fig2 = px.bar(casos_por_faixa, x="Casos", y="Faixa Etaria", orientation='h',
-                title="2.Distribuicao total por faixa etaria (2018-2023)")
+                title="2.Distribuição total por faixa etária (2018-2023)")
     st.plotly_chart(fig2, use_container_width=True)
 
 #===============================
@@ -128,7 +128,7 @@ with col3:
     df_long = pd.melt(df, id_vars=["Ano Notificação"], value_vars=faixas,
                       var_name="Faixa Etaria", value_name="Casos")
     fig3 = px.bar(df_long, x="Ano Notificação", y="Casos", color="Faixa Etaria",
-                  title="3.Casos por faixa etaria ao longo dos anos", barmode="stack")
+                  title="3.Casos por faixa etária ao longo dos anos", barmode="stack")
     st.plotly_chart(fig3, use_container_width=True)
 # grafico 4  >>  faixa etaria predominante por ano
 with col4:
@@ -139,7 +139,7 @@ with col4:
     df_long_line["Ano Notificação"] = df_long_line["Ano Notificação"].astype(int)
 
     fig4 = px.line(df_long_line, x="Ano Notificação", y="Casos", color="Faixa etaria",
-                   title="4.Evolucao por faixa etaria", markers=True)
+                   title="4.Evolução por faixa etária", markers=True)
     st.plotly_chart(fig4, use_container_width=True)
 
 
