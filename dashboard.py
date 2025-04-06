@@ -3,8 +3,7 @@ import streamlit as st        #  criar dashboard
 import plotly.express as px    #  construir graficos
 
 
-#=============================== 
-# configuracao da pagina
+
 st.set_page_config(page_title="AIDS no Maranhão ", layout="wide")
 st.markdown("""
     <style>
@@ -17,8 +16,7 @@ st.markdown("""
     </style>
 """, unsafe_allow_html=True)
 
-#===============================
-# SIDEBAR - painel lateral
+
 with st.sidebar:
     st.image("logo_datasus.png", width=250)   # logo datasus
     st.header("UF: Maranhão")
@@ -45,8 +43,6 @@ with st.sidebar:
     </div>
     """, unsafe_allow_html=True)
 
-#===============================
-# leitura e tratamento dos dados
 df = pd.read_csv("dados.csv", sep=",")
 df = df[df["Ano Notificação"] != "TOTAL"] # removendo linha total
 df["Ano Notificação"] = df["Ano Notificação"].astype(int)
@@ -62,8 +58,6 @@ df_sx_long = pd.melt(df_sx, id_vars=["Sexo"], value_vars=["2018", "2019", "2020"
                      var_name="Ano", value_name="Casos")
 df_sx_long["Ano"] = df_sx_long["Ano"].astype(int)            
 
-#===============================
-# titulo do dashboard
 st.markdown("<h1 style='text-align: center; color: #004080;' >Casos de AIDS: De 2018 a 2023</h1>", unsafe_allow_html=True)
 
 # texto 1
@@ -102,8 +96,6 @@ st.markdown("""
 4. Gráfico de linha que permite observar tendências por grupo etário.<br>
 </p>""", unsafe_allow_html=True)
 
-#===============================
-# colunas de grafico 1 e 2
 col1, col2 = st.columns(2)
 # grafico 1  >>  Evolucao total de casos por ano
 with col1:
@@ -144,8 +136,6 @@ with col4:
 
 
 
-#================================
-# texto de conclusao
 
 st.markdown("<h2 style='text-align: left; color: #004080;' >4. Conclusão</h2>", unsafe_allow_html=True)
 st.markdown("""
