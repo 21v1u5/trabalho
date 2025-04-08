@@ -140,9 +140,11 @@ with col4:
 st.markdown("<h2 style='text-align: left; color: #004080;' >4. Conclusão</h2>", unsafe_allow_html=True)
 st.markdown("""
 <p style='font-size: 20px;'>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;A análise dos dados de AIDS no Maranhão entre 2018 e 2023 revelou que os casos concentram-se principalmente nas faixas etárias entre 20 e 39 anos, predominantemente no sexo masculino, o que reforça a importância de campanhas direcionadas ao público jovem e adulto.
-Além disso, observou-se uma redução no número total de casos nos últimos anos, embora ainda existam variações significativas por grupo etário.
-O uso do Python e das bibliotecas modernas de visualização foi essencial para organizar, analisar e apresentar os dados de forma clara e acessível, contribuindo para uma tomada de decisão mais assertiva em saúde pública.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;A partir da análise dos dados e gráficos, notou-se que no Maranhão, entre 2018 e 2023, a faixa etária mais afetada pelos casos de AIDS foi a de 20 a 39 anos, concentrando a maior parte das notificações ao longo do período. A distribuição por idade manteve-se estável, sem variações abruptas que indicassem mudanças significativas no perfil etário das pessoas acometidas.
+
+De modo geral, os dados revelam uma tendência consistente de queda nos casos registrados ano após ano. Entretanto, em 2022, houve uma reversão pontual nessa trajetória: os números voltaram a subir, aproximando-se dos patamares de 2020, interrompendo a tendência de redução observada nos anos anteriores e configurando uma anomalia no comportamento dos dados.
+
+Apesar desse aumento isolado, a comparação entre os extremos do período analisado mostra uma redução expressiva de 68,5% nos casos notificados entre 2018 e 2023, indicando um avanço significativo no controle da doença. Contudo, a recorrência de casos entre jovens adultos reforça a necessidade de políticas públicas direcionadas a essa população, com ênfase em prevenção, diagnóstico precoce e tratamento contínuo, a fim de consolidar o declínio da AIDS no estado e evitar retrocessos.<br>
 <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Este dashboard pode ser facilmente adaptado para análises de outros estados ou doenças notificáveis, promovendo a democratização dos dados e a ampliação do conhecimento baseado em evidências.<br>
 </p>""", unsafe_allow_html=True)
 
