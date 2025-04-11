@@ -14,7 +14,7 @@ Eliseu
 # Orientador: Prof. Leonardo Henrique Silva Lago
 
 # ✨ Funcionalidades
-# Visualizações interativas com Plotly.js:
+# Visualizações interativas com Plotly:
 
 - Gráfico de linha da evolução por sexo;
 
