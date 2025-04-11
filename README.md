@@ -69,23 +69,22 @@ Visualização: Dados processados são integrados ao dashboard web
 - Clone o repositório:
 
 bash
-Copy \n
-git clone https://github.com/seu-usuario/aids-maranhao.git \n
-streamlit run dashboard.py \n
-/* na barra de pequisa web coloque o comando a seguir para abrir a aplicação */  \n
+Copy 
+
+git clone https://github.com/seu-usuario/aids-maranhao.git 
+
+streamlit run dashboard.py
+
+/* na barra de pequisa web coloque o comando a seguir para abrir a aplicação */
+
 localhost:8080 
 
-# Para reprocessamento dos dados:
+
 # Instale as dependências Python:
 
 bash
 Copy
-pip install pandas plotly streamlit
-Execute o script de processamento:
-
-bash
-Copy
-python pip install requirements.txt
+pip install requirements.txt
 
 # 📄 Licença
 Este projeto utiliza dados públicos do DATASUS e está disponível para fins educacionais. Consulte as políticas de uso de dados do Ministério da Saúde para aplicações profissionais.# DATA-SUS-HIV
