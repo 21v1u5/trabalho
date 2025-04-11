@@ -1,6 +1,6 @@
-import pandas as pd           #  manipulacao de dados 
+import pandas as pd           #  manipulação de dados 
 import streamlit as st        #  criar dashboard 
-import plotly.express as px    #  construir graficos
+import plotly.express as px    #  construir gráficos
 
 
 
@@ -92,10 +92,10 @@ st.markdown("""
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Com base nos dados tratados, foram gerados quatro graficos, que compoem os dashboards abaixo:
 </p>
 <p style='font-size: 20px;'>
-1. Grafico de linha que mostra a distribuicao de casos por ano com relação ao sexo.<br>
-2. Grafico de barras com os grupos etarios mais afetados.<br> 
-3. Grafico de barras empilhadas que mostra como a incidencia varia ao longo do tempo.<br>
-4. Grafico de linha que permite observar tendencias por grupo etario.<br>
+1. Gráfico de linha que mostra a distribuição de casos por ano com relação ao sexo.<br>
+2. Gráfico de barras com os grupos etários mais afetados.<br> 
+3. Gráfico de barras empilhadas que mostra como a incidência varia ao longo do tempo.<br>
+4. Gráfico de linha que permite observar tendências por grupo etário.<br>
 </p>""", unsafe_allow_html=True)
 
 
