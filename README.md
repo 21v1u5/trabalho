@@ -69,10 +69,10 @@ Visualização: Dados processados são integrados ao dashboard web
 - Clone o repositório:
 
 bash
-Copy
-git clone https://github.com/seu-usuario/aids-maranhao.git
-streamlit run dashboard.py
-/* na barra de pequisa web coloque o comando a seguir para abrir a aplicação */
+Copy \n
+git clone https://github.com/seu-usuario/aids-maranhao.git \n
+streamlit run dashboard.py \n
+/* na barra de pequisa web coloque o comando a seguir para abrir a aplicação */  \n
 localhost:8080 
 
 # Para reprocessamento dos dados:
