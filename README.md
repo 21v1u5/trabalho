@@ -1,32 +1,92 @@
-# Análise de dados: infeccao de AIDS no maranhao (2018-2023) (python)
+# Projeto de Análise de Casos de AIDS no Maranhão (2018-2023)
+# 📌 Visão Geral
+Este projeto apresenta um dashboard interativo que analisa os casos de AIDS no estado do Maranhão entre os anos de 2018 e 2023. Desenvolvido como parte da disciplina de Lógica e Matemática Discreta, o projeto utiliza dados públicos do DATASUS para fornecer insights visuais sobre a evolução da doença no período.
 
-Esta aplicação remete a um trabalho universitário da cadeira(lógica e matemática discreta) pela instituição UNDB.
-Em resumo, está aplicação se trata de uma análise de dados com python utilizando dados públicos.
+# 👥 Equipe
+Livius Penha
 
-Objetivo é demonstrar a importância do tratamento, análise e manipulaçao de dados para um bom ou um entendimento extra sobre um determinado assunto com base nas informações coletadas.
+Roberth Furtado
 
-alunos: 
-  - Livius Penha
-  - Eliseu
-  - Rebert Furtado
-  - Gabriel
+Gabriel
 
+Eliseu
 
+# Orientador: Prof. Leonardo Henrique Silva Lago
 
-sobre a pesquisa.
-1. INTRODUCAO
-    A AIDS (Síndrome da Imunodeficiência Adquirida) continua sendo um dos maiores desafios de saúde pública no Brasil.  Embora haja avanços significativos na prevenção e no tratamento, a incidência da doença ainda exige atenção constante dos gestores públicos e da sociedade. Este relatório tem como foco os casos notificados de AIDS no *estado do Maranhão, entre os anos de **2018 e 2023*, com o objetivo de analisar padrões de ocorrência por ano e faixa etária.  A escolha do Maranhão justifica-se por sua importância estratégica na Região Nordeste, além de ser um estado com desafios históricos em relação à cobertura de saúde e vigilância epidemiológica.
+# ✨ Funcionalidades
+# Visualizações interativas com Plotly.js:
 
-2. Metodologia
-    Os dados utilizados neste dashboard foram coletados na plataforma *DATASUS, por meio do sistema **TABNET/SINAN*, que disponibiliza informações públicas sobre doenças e agravos de notificação em todo o território brasileiro.
-Foi realizado um recorte específico para o estado do Maranhão, abrangendo o período de 2018 a 2023. 
-Esses dados foram exportados em formato .csv e processados com a linguagem *Python*, utilizando as bibliotecas:
-- *pandas* para manipulação dos dados,
-- *plotly.express* para construção dos gráficos interativos,
-- *streamlit* para desenvolvimento do dashboard apresentado.
-Todo o tratamento e visualização foram feitos de forma automatizada, com foco em facilitar a análise e interpretação por profissionais da saúde e gestores públicos.
+- Gráfico de linha da evolução por sexo;
 
-3. CONCLUSAO
-     A análise dos dados de AIDS no Maranhão entre 2018 e 2023 revelou que os casos concentram-se principalmente nas faixas etárias entre *20 e 39 anos*, o que reforça a importância de campanhas direcionadas ao público jovem e adulto. Além disso, observou-se uma redução no número total de casos nos últimos anos, embora ainda existam variações significativas por grupo etário. O uso do Python e das bibliotecas modernas de visualização foi essencial para organizar, analisar e apresentar os dados de forma clara e acessível, contribuindo para uma *tomada de decisão mais assertiva em saúde pública*.
+- Gráfico de barras horizontais por faixa etária;
 
-    Este dashboard pode ser facilmente adaptado para análises de outros estados ou doenças notificáveis, promovendo a democratização dos dados e a ampliação do conhecimento baseado em evidências.
+- Gráfico de barras empilhadas por ano e faixa etária;
+
+- Gráfico de linhas múltiplas por faixa etária;
+
+# Design responsivo que se adapta a diferentes tamanhos de tela
+
+# Sidebar informativa com:
+
+- Identificação do projeto;
+
+- Informações acadêmicas;
+
+- Equipe de desenvolvimento;
+
+# 🛠️ Tecnologias Utilizadas
+# Backend (Processamento de Dados)
+- Python com as seguintes bibliotecas:
+
+	- Pandas para manipulação e análise de dados
+
+	- Plotly para geração dos gráficos
+
+	- Streamlit para aprensetação do dashboard (front-end)
+
+# Fontes de Dados
+DATASUS/TABNET (Sistema de Informação de Agravos de Notificação)
+
+# 🔄 Fluxo de Processamento
+Extração: Dados brutos extraídos do DATASUS em formato CSV
+
+# Processar para visualização
+Visualização: Dados processados são integrados ao dashboard web
+
+# 📊 Estrutura dos Dados
+# Os dados analisados incluem:
+
+- Número de casos por ano (2018-2023)
+
+- Distribuição por sexo (masculino/feminino)
+
+- Casos por faixa etária (12 categorias)
+
+- Evolução temporal por faixa etária
+
+# 🚀 Como Utilizar
+- Para visualização:
+- Clone o repositório:
+
+bash
+Copy
+git clone https://github.com/seu-usuario/aids-maranhao.git
+streamlit run dashboard.py
+/* na barra de pequisa web coloque o comando a seguir para abrir a aplicação */
+localhost:8080 
+
+# Para reprocessamento dos dados:
+# Instale as dependências Python:
+
+bash
+Copy
+pip install pandas plotly streamlit
+Execute o script de processamento:
+
+bash
+Copy
+python pip install requirements.txt
+
+# 📄 Licença
+Este projeto utiliza dados públicos do DATASUS e está disponível para fins educacionais. Consulte as políticas de uso de dados do Ministério da Saúde para aplicações profissionais.# DATA-SUS-HIV
+
